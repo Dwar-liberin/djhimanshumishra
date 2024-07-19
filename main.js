@@ -18,8 +18,8 @@
           {
               appName: "DwAR",
               customerId: "4",
-              campaignName: "crax",
-              serverUrl: "https://staging.lttl.in/event"
+              campaignName: "DJ Himanshu Mishra",
+              serverUrl: "https://lttl.in/event"
           }
        );
 
@@ -130,12 +130,12 @@
   const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
   scene.add(light);
 
-  const loadFont = () => {
+  const loadFont = (fontURL) => {
     return new Promise((resolve, reject) => {
       const loader = new THREE.FontLoader();
 
       loader.load(
-        "https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/fonts/helvetiker_regular.typeface.json",
+        fontURL,
         (font) => {
           resolve(font); // Resolve the promise with the loaded font
         },
@@ -147,85 +147,145 @@
     });
   };
 
-  const font = await loadFont();
-  
-
   
     
-      const target_imagefce086890f3_iconGeometry = new THREE.PlaneGeometry(1, 0.5628306878306878);
-   const target_imagefce086890f3_texture = await loadTexture("assets/crax-marker.png");
-  const target_imagefce086890f3_image = new THREE.MeshBasicMaterial({
-      map: target_imagefce086890f3_texture,
+      const image_e46ef321_f7386e47_iconGeometry = new THREE.PlaneGeometry(1, 0.55);
+   const image_e46ef321_f7386e47_texture = await loadTexture("assets/overlay-image.png");
+  const image_e46ef321_f7386e47_image = new THREE.MeshBasicMaterial({
+      map: image_e46ef321_f7386e47_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const target_imagefce086890f3 = new THREE.Mesh(target_imagefce086890f3_iconGeometry, target_imagefce086890f3_image);
-    target_imagefce086890f3.scale.set(1, 1, 1);
-    target_imagefce086890f3.position.set(0.01, -0.01, 0.01);
-    target_imagefce086890f3.rotation.set(-0.001, 0, 0);
+    const image_e46ef321_f7386e47 = new THREE.Mesh(image_e46ef321_f7386e47_iconGeometry, image_e46ef321_f7386e47_image);
+    image_e46ef321_f7386e47.scale.set(1.05, 1.05, 1.1);
+    image_e46ef321_f7386e47.position.set(0.017, -0.01, 0);
+    image_e46ef321_f7386e47.rotation.set(-0.001, 0, 0);
+    
+    
+    
+const image_6c8ed7e0_25fd2ceb_iconGeometry = new THREE.PlaneGeometry(1, 0.33);
+   const image_6c8ed7e0_25fd2ceb_texture = await loadTexture("assets/gntunes-logo.png");
+  const image_6c8ed7e0_25fd2ceb_image = new THREE.MeshBasicMaterial({
+      map: image_6c8ed7e0_25fd2ceb_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_6c8ed7e0_25fd2ceb = new THREE.Mesh(image_6c8ed7e0_25fd2ceb_iconGeometry, image_6c8ed7e0_25fd2ceb_image);
+    image_6c8ed7e0_25fd2ceb.scale.set(0.6, 0.6, 0.6);
+    image_6c8ed7e0_25fd2ceb.position.set(0.06, -0.44, 0);
+    image_6c8ed7e0_25fd2ceb.rotation.set(-0.001, 0, 0);
+    
+    
+    
+const image_1c97cad3_9d03dd93_iconGeometry = new THREE.PlaneGeometry(1, 1.01);
+   const image_1c97cad3_9d03dd93_texture = await loadTexture("assets/himanshu-profile.png");
+  const image_1c97cad3_9d03dd93_image = new THREE.MeshBasicMaterial({
+      map: image_1c97cad3_9d03dd93_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_1c97cad3_9d03dd93 = new THREE.Mesh(image_1c97cad3_9d03dd93_iconGeometry, image_1c97cad3_9d03dd93_image);
+    image_1c97cad3_9d03dd93.scale.set(0.2, 0.2, 0.2);
+    image_1c97cad3_9d03dd93.position.set(-0.39, -0.44, 0);
+    image_1c97cad3_9d03dd93.rotation.set(-0.001, 0, 0);
+    
+    
+    
+const image_5fec6a67_6cbc1ae1_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_5fec6a67_6cbc1ae1_texture = await loadTexture("assets/imdb-logo.png");
+  const image_5fec6a67_6cbc1ae1_image = new THREE.MeshBasicMaterial({
+      map: image_5fec6a67_6cbc1ae1_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_5fec6a67_6cbc1ae1 = new THREE.Mesh(image_5fec6a67_6cbc1ae1_iconGeometry, image_5fec6a67_6cbc1ae1_image);
+    image_5fec6a67_6cbc1ae1.scale.set(0.2, 0.2, 0.2);
+    image_5fec6a67_6cbc1ae1.position.set(0.7, 0.03, 0);
+    image_5fec6a67_6cbc1ae1.rotation.set(-0.001, 0, 0);
+    image_5fec6a67_6cbc1ae1.userData.clickable = true
+    
+    image_5fec6a67_6cbc1ae1.userData.eventName ="IMDb"
+const image_f3e604cf_02f201d1_iconGeometry = new THREE.PlaneGeometry(1, 0.99);
+   const image_f3e604cf_02f201d1_texture = await loadTexture("assets/instagram-logo.png");
+  const image_f3e604cf_02f201d1_image = new THREE.MeshBasicMaterial({
+      map: image_f3e604cf_02f201d1_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_f3e604cf_02f201d1 = new THREE.Mesh(image_f3e604cf_02f201d1_iconGeometry, image_f3e604cf_02f201d1_image);
+    image_f3e604cf_02f201d1.scale.set(0.2, 0.2, 0.2);
+    image_f3e604cf_02f201d1.position.set(0.7, -0.19, 0);
+    image_f3e604cf_02f201d1.rotation.set(-0.001, 0, 0);
+    image_f3e604cf_02f201d1.userData.clickable = true
+    
+    image_f3e604cf_02f201d1.userData.eventName ="Instagram"
+const image_d41a53f8_eb08f97a_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_d41a53f8_eb08f97a_texture = await loadTexture("assets/spotify.png");
+  const image_d41a53f8_eb08f97a_image = new THREE.MeshBasicMaterial({
+      map: image_d41a53f8_eb08f97a_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_d41a53f8_eb08f97a = new THREE.Mesh(image_d41a53f8_eb08f97a_iconGeometry, image_d41a53f8_eb08f97a_image);
+    image_d41a53f8_eb08f97a.scale.set(0.2, 0.2, 0.2);
+    image_d41a53f8_eb08f97a.position.set(0.7, 0.25, 0);
+    image_d41a53f8_eb08f97a.rotation.set(-0.001, 0, 0);
+    image_d41a53f8_eb08f97a.userData.clickable = true
+    
+    image_d41a53f8_eb08f97a.userData.eventName ="Spotify "
+const target_imageundefid1435_iconGeometry = new THREE.PlaneGeometry(1, 0.5796178343949044);
+   const target_imageundefid1435_texture = await loadTexture("assets/dj-visiting-card.png");
+  const target_imageundefid1435_image = new THREE.MeshBasicMaterial({
+      map: target_imageundefid1435_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const target_imageundefid1435 = new THREE.Mesh(target_imageundefid1435_iconGeometry, target_imageundefid1435_image);
+    target_imageundefid1435.scale.set(1, 1, 1);
+    target_imageundefid1435.position.set(0.01, -0.01, 0.01);
+    target_imageundefid1435.rotation.set(-0.001, 0, 0);
     
     
     
 
-    const video_asset_8c14c58a719_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
+    const video_asset_a6f14ab7c2d_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
 
-    const video_asset_8c14c58a719_Item0Video = await loadVideo("assets/crax video.mp4");
+    const video_asset_a6f14ab7c2d_Item0Video = await loadVideo("assets/djhm-video.mp4");
 
-    const video_asset_8c14c58a719_Item0VideoTexture = new THREE.VideoTexture(
-      video_asset_8c14c58a719_Item0Video
+    const video_asset_a6f14ab7c2d_Item0VideoTexture = new THREE.VideoTexture(
+      video_asset_a6f14ab7c2d_Item0Video
     );
 
-    let video_asset_8c14c58a719_Item0VideoMaterial
+    let video_asset_a6f14ab7c2d_Item0VideoMaterial
 
-      video_asset_8c14c58a719_Item0VideoMaterial = new THREE.MeshBasicMaterial({
-          map: video_asset_8c14c58a719_Item0VideoTexture,
+      video_asset_a6f14ab7c2d_Item0VideoMaterial = new THREE.MeshBasicMaterial({
+          map: video_asset_a6f14ab7c2d_Item0VideoTexture,
+          transparent:true
         })
     
-     const video_asset_8c14c58a719 = new THREE.Mesh(
-      video_asset_8c14c58a719_planeGeometry,
-      video_asset_8c14c58a719_Item0VideoMaterial
+     const video_asset_a6f14ab7c2d = new THREE.Mesh(
+      video_asset_a6f14ab7c2d_planeGeometry,
+      video_asset_a6f14ab7c2d_Item0VideoMaterial
     );
 
-  video_asset_8c14c58a719.position.set(0.014, -0.007, 0);
+  video_asset_a6f14ab7c2d.position.set(0.02, 0.618, 0);
 
 
 
   if (isIOS) {
-    video_asset_8c14c58a719_Item0Video.muted=isIOS
+    video_asset_a6f14ab7c2d_Item0Video.muted=isIOS
     muteIconMesh = await loadUnmuteLogo();
     anchor.group.add(muteIconMesh);
   }
 
-  video_asset_8c14c58a719_Item0Video.loop=true;
+  video_asset_a6f14ab7c2d_Item0Video.loop=true;
   
-  video_asset_8c14c58a719.scale.set(1, 1, 1);
+  video_asset_a6f14ab7c2d.scale.set(1.05, 1.05, 1);
 
-    video_asset_8c14c58a719.rotation.set(-0.001, 0, 0);
+    video_asset_a6f14ab7c2d.rotation.set(-0.001, 0, 0);
 
     
   
-const image_8bfe2b3f_d91d91a3_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_8bfe2b3f_d91d91a3_texture = await loadTexture("assets/blinkit-logo.png");
-  const image_8bfe2b3f_d91d91a3_image = new THREE.MeshBasicMaterial({
-      map: image_8bfe2b3f_d91d91a3_texture,
-    });
-    const image_8bfe2b3f_d91d91a3 = new THREE.Mesh(image_8bfe2b3f_d91d91a3_iconGeometry, image_8bfe2b3f_d91d91a3_image);
-    image_8bfe2b3f_d91d91a3.scale.set(0.3, 0.3, 0.3);
-    image_8bfe2b3f_d91d91a3.position.set(0.33, -0.51, 0.04);
-    image_8bfe2b3f_d91d91a3.rotation.set(-0.001, 0, 0);
-    image_8bfe2b3f_d91d91a3.userData.clickable = true
-    
-    image_8bfe2b3f_d91d91a3.userData.eventName ="Blinkit"
-const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
-   const image_4e483042_f6ff6fcb_texture = await loadTexture("assets/crax-logo.jpg");
-  const image_4e483042_f6ff6fcb_image = new THREE.MeshBasicMaterial({
-      map: image_4e483042_f6ff6fcb_texture,
-    });
-    const image_4e483042_f6ff6fcb = new THREE.Mesh(image_4e483042_f6ff6fcb_iconGeometry, image_4e483042_f6ff6fcb_image);
-    image_4e483042_f6ff6fcb.scale.set(0.3, 0.3, 0.3);
-    image_4e483042_f6ff6fcb.position.set(-0.327, -0.511, 0.04);
-    image_4e483042_f6ff6fcb.rotation.set(-0.001, 0, 0);
-    image_4e483042_f6ff6fcb.userData.clickable = true
-    
-    image_4e483042_f6ff6fcb.userData.eventName ="Crax website"
       
        document.body.addEventListener("click", (e) => {
     const mouseX = (e.clientX / window.innerWidth) * 2 - 1;
@@ -258,7 +318,7 @@ const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
 
         if(isIOS){ 
           if (o.userData.clickable && o === muteIconMesh) {
-            video_asset_8c14c58a719_Item0Video.muted=false
+            video_asset_a6f14ab7c2d_Item0Video.muted=false
     
             anchor.group.remove(muteIconMesh);
             return true;
@@ -271,23 +331,23 @@ const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
       if (o.userData.clickable) window.showLoadingScreen();
 
       
-      if (o.userData.clickable && o === video_asset_8c14c58a719) {
+      if (o.userData.clickable && o === image_5fec6a67_6cbc1ae1) {
         setTimeout(()=>{
-          window.location.href = "https://blinkit.com/s/?q=crax"
+          window.location.href = "https://www.imdb.com/name/nm14115341"
         },100)
         }
       
 
-      if (o.userData.clickable && o === image_8bfe2b3f_d91d91a3) {
+      if (o.userData.clickable && o === image_f3e604cf_02f201d1) {
         setTimeout(()=>{
-          window.location.href = "https://blinkit.com/s/?q=crax"
+          window.location.href = "https://www.instagram.com/djhimanshumishra"
         },100)
         }
       
 
-      if (o.userData.clickable && o === image_4e483042_f6ff6fcb) {
+      if (o.userData.clickable && o === image_d41a53f8_eb08f97a) {
         setTimeout(()=>{
-          window.location.href = "https://www.craxcurls.com/"
+          window.location.href = "https://open.spotify.com/artist/1UI8TqDajrGyDZA3SGjaR0"
         },100)
         }
       
@@ -296,10 +356,14 @@ const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
     })
     
       
-    
-anchor.group.add(video_asset_8c14c58a719)
-anchor.group.add(image_8bfe2b3f_d91d91a3)
-anchor.group.add(image_4e483042_f6ff6fcb)
+    anchor.group.add(image_e46ef321_f7386e47)
+anchor.group.add(image_6c8ed7e0_25fd2ceb)
+anchor.group.add(image_1c97cad3_9d03dd93)
+anchor.group.add(image_5fec6a67_6cbc1ae1)
+anchor.group.add(image_f3e604cf_02f201d1)
+anchor.group.add(image_d41a53f8_eb08f97a)
+
+anchor.group.add(video_asset_a6f14ab7c2d)
 
 
     anchor.onTargetFound = () => {
@@ -316,15 +380,23 @@ anchor.group.add(image_4e483042_f6ff6fcb)
 
 
 
+
+
+
+
      
-      video_asset_8c14c58a719_Item0Video.play();
+      video_asset_a6f14ab7c2d_Item0Video.play();
     };
 
 
     anchor.onTargetLost = () => {
-       video_asset_8c14c58a719_Item0Video.pause();
+       video_asset_a6f14ab7c2d_Item0Video.pause();
 
         
+
+
+
+
 
 
 
